@@ -8,12 +8,18 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { ProductsComponent } from './products/products.component';
 import {MatButtonModule} from '@angular/material/button';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
+    HeaderComponent,
+    HomeComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,
