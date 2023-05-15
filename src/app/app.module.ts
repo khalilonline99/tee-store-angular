@@ -11,6 +11,13 @@ import {MatButtonModule} from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { AddNewProductComponent } from './add-new-product/add-new-product.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -20,13 +27,16 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     HeaderComponent,
     HomeComponent,
     ProductDetailsComponent,
+    AddNewProductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatToolbarModule, MatIconModule, MatButtonModule
+    MatToolbarModule, MatIconModule, MatButtonModule, MatFormFieldModule, MatSelectModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,14 @@
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+#back-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
 .details-body {
     display: flex;
     justify-content: space-evenly;

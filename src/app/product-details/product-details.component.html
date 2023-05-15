@@ -1,24 +1,22 @@
-<div class="details-body">
-    <img mat-card-image src="https://placehold.co/500x500" alt="Photo of a Dog" class="example-body-image">
-    <div>
-        <h2>Product Name</h2>
-        <p>
-            
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-        </p>
+<div class="body">
+    <a routerLink="/" id="back-button"><button mat-raised-button>Go Homepage</button></a>
+    <div class="details-body">
+        <img mat-card-image src="https://placehold.co/500x500" alt="Photo of a Dog" class="example-body-image">
         <div>
-            <ul>
-                <li>Color: Black</li>
-                <li>Size: XXL</li>
-                <li>Fabric: Pure Cotton</li>
-                <li>In Stock: True</li>
-            </ul>
-            <h3>Price: <span>$</span>120</h3>
+            <h2> {{product.title}} </h2>
+            <p>{{product.description}}</p>
+            <div>
+                <ul>
+                    <li>Color: {{product.properties.color}}</li>
+                    <li>Size: {{product.properties.size}}</li>
+                    <li>Fabric: {{product.properties.fabric}}</li>
+                    <li>In Stock: {{product.properties.inStock}}</li>
+                </ul>
+                <h3>Price: <span>$</span> {{product.price}} </h3>
+            </div>
+            <button mat-raised-button style="margin-right: 10px;">Edit</button>
+            <button mat-raised-button color="accent" style="margin-right: 10px;">Save</button>
+            <button mat-raised-button color="warn">Delete</button>
         </div>
-        <button mat-raised-button style="margin-right: 10px;">Edit</button>
-        <button mat-raised-button color="accent" style="margin-right: 10px;">Save</button>
-        <button mat-raised-button color="warn">Delete</button>
     </div>
 </div>

@@ -1,4 +1,9 @@
-.example-card {
+.product-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
   max-width: 400px;
   margin-left: 10px;
   margin-right: 10px;
@@ -6,18 +11,13 @@
   background-color: rgb(242, 222, 255);
 }
 
-.example-header-image {
+.header-image {
   background-image: url('https://digitalhub.fifa.com/m/6f4242005904d785/webimage-Partner-asset-inverted-logo-ADIDAS-01.png');
   background-size: cover;
   padding: 5px;
 }
 
-.example-body-image {
+.body-image {
   padding: 15px;
 }
 
-.product-body {
-  display: flex;
-  justify-content: center;
-  /* flex-direction: row; */
-}

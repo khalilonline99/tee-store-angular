@@ -1,0 +1,41 @@
+<!-- <label for="productTitle">Title:</label>
+<input type="text" id="productTitle" [formControl]="productTitle">
+<button type="button" (click)="updateTitle()"> Update</button>
+<p> {{productTitle.value}} </p> -->
+
+<div>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="form-body">
+
+    <label for="product-title">Product Title: </label>
+    <input id="product-title" type="text" formControlName="productTitle">
+
+    <label for="product-description">Description: </label>
+    <!-- <input id="product-description" type="text" formControlName="description"> -->
+    <textarea id="product-description" cols="30" rows="10" formControlName="description"></textarea>
+
+    <div formGroupName="properties">
+      <h2>Other Details:</h2>
+      <div style="display: flex; flex-direction: column;">
+        <div>
+          <label for="product-color">Color:</label> <br>
+          <input id="product-color" type="text" formControlName="color"> <br>
+        </div>
+
+        <div>
+          <label for="product-size">Size: </label> <br>
+          <input id="product-size" type="text" formControlName="size"> <br>
+        </div>
+
+        <div>
+          <label for="product-stock">In Stock: </label> <br>
+          <input id="product-stock" type="text" formControlName="inStock">
+        </div>
+
+      </div>
+
+    </div>
+    <br>
+    <p>PLease, Complete the form to enable button.</p>
+    <button type="submit" [disabled]="!productForm.valid">Submit</button>
+  </form>
+</div>
