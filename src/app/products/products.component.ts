@@ -17,7 +17,6 @@ export class ProductsComponent {
     this.productService.getData().subscribe ( res => {
       this.allProduct = res;
       // console.log(this.allProduct);
-      
     })
   }
 

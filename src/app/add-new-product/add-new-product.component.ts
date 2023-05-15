@@ -10,21 +10,23 @@ import { AddNewProductService } from '../add-new-product.service';
 export class AddNewProductComponent {
 
 
- productForm = this.fb.group ({
-   productTitle: ['', Validators.required],
-   description: ['', Validators.required],
-   properties: this.fb.group ({
-     color: ['', Validators.required],
-     size: ['', Validators.required],
-     inStock: ['', Validators.required],
+  productForm = this.fb.group({
+    productTitle: ['', Validators.required],
+    description: ['', Validators.required],
+    productImage: [''],
+    price: ['', Validators.required],
+    properties: this.fb.group({
+      color: ['', Validators.required],
+      size: ['', Validators.required],
+      inStock: ['', Validators.required],
     }),
   });
 
-  constructor (
+  constructor(
     private fb: FormBuilder,
     private addNewProducrService: AddNewProductService
-    ) { }
-  
+  ) { }
+
   onSubmit() {
     this.addNewProducrService.onSubmit(this.productForm);
     // console.log(this.productForm.value);

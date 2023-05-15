@@ -1,4 +1,9 @@
 
+.form-container {
+    width:800px;
+    margin:0 auto;
+}
+
 .form-body {
     margin-top: 15px;
     background-color: rgb(251, 223, 214);
@@ -7,4 +12,14 @@
     display: flex;
     flex-direction: column;
     max-width: 550px;
+}
+
+.input-box {
+    max-width: 300px;;
+}
+
+
+.submit-button {
+    max-width: 300px;
+    margin:0 auto;
 }
