@@ -2,13 +2,13 @@
   <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="form-body">
 
     <label for="product-title">Product Title:* </label>
-    <input id="product-title" type="text" formControlName="productTitle">
+    <input id="product-title" type="text" formControlName="title">
     <br>
     <label for="product-description">Description:* </label>
     <textarea id="product-description" cols="30" rows="10" formControlName="description"></textarea>
     <br>
     <label for="product-image">Image Link: </label>
-    <input id="product-image" type="text" formControlName="productImage">
+    <input id="product-image" type="text" formControlName="image">
     <br>
     <label for="product-price">Product Price:* </label>
     <input id="product-price" type="text" formControlName="price" class="input-box">

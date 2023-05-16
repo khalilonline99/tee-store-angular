@@ -11,9 +11,9 @@ export class AddNewProductComponent {
 
 
   productForm = this.fb.group({
-    productTitle: ['', Validators.required],
+    title: ['', Validators.required],
     description: ['', Validators.required],
-    productImage: [''],
+    image: [''],
     price: ['', Validators.required],
     properties: this.fb.group({
       color: ['', Validators.required],

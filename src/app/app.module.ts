@@ -14,8 +14,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { AddNewProductComponent } from './add-new-product/add-new-product.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 
@@ -34,8 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatToolbarModule, MatIconModule, MatButtonModule, MatFormFieldModule, MatSelectModule,
-    ReactiveFormsModule,
+    MatToolbarModule, MatIconModule, MatButtonModule, MatFormFieldModule, MatSelectModule, MatDialogModule,
+    ReactiveFormsModule, FormsModule,
     HttpClientModule
   ],
   providers: [],
