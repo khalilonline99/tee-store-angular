@@ -1,6 +1,7 @@
 .body {
     display: flex;
     flex-direction: column;
+    padding: 30px;
 }
 
 #back-button {
@@ -18,4 +19,9 @@
 
 #details {
     font-weight: 700;
+}
+
+#texts {
+margin-left: 30px;
+margin-right: 90px;
 }

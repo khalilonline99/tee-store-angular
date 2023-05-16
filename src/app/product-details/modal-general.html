@@ -1,22 +1,28 @@
 <style>
 .body {
   padding: 10px;
-  max-width: 300px;
+  /* max-width: 300px; */
 }
 
-#button {
+.button {
   margin-right: 5px;
+  padding: 8px;
 }
+#tshirt {
+  font-weight: 500;
+}
+
 
 </style>
 
 <div class="body">
   <h1 mat-dialog-title>Delete T-shirt</h1>
   <div mat-dialog-content>
-    <h3>Would you like to delete This T-shirt?</h3>
+    <h3>Are you sure that you want to delete <span id="tshirt">{{product.title}}</span>?</h3> <br>
+    <p>Please be notified that after delete you cannot restore it.</p>
   </div>
   <div mat-dialog-actions>
-    <button mat-button (click)="closeModal()" id="button">No</button>
-    <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+    <button mat-button (click)="closeModal()" class="button">No</button>
+    <button mat-button mat-dialog-close cdkFocusInitial (click)="deleteProduct()" class="button">Delete</button>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { ProductInterface } from '../product';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
@@ -13,6 +13,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 export class ProductDetailsComponent {
   product: any;
+  productId: any;
 
   constructor(
     // injected and saved in private fields
@@ -26,12 +27,16 @@ export class ProductDetailsComponent {
     const id = this.route.snapshot.paramMap.get('id');
     this.productService.getProductById(id).subscribe(items => {
       this.product = items;
+      this.productService.productId = id;
+      this.productService.product = items;
     }
     )
   }
 
+
   ngOnInit(): void {
     this.getProduct();
+    // console.log(this.productId);
   }
 
   goBack(): void {
@@ -56,9 +61,36 @@ export class ProductDetailsComponent {
 })
 
 export class ModalGeneral {
-  constructor(public modalRef: MatDialogRef<ModalGeneral>) {}
+
+  // @Input() productId: any;
+  product: any = this.productService.product;
   
+  constructor(
+    public modalRef: MatDialogRef<ModalGeneral>,
+    private productService: ProductService,
+    private route: ActivatedRoute,
+    private location: Location,
+    private router: Router
+
+  ) { }
+
   closeModal() {
     this.modalRef.close();
   }
+
+
+  deleteProduct(): void {
+    // console.log('the id is', this.productService.productId);
+  
+    this.productService.deleteProduct(this.productService.productId)
+    .subscribe(res => {
+      // console.log(res);
+      if (res.acknowledged) {
+        this.router.navigate(['/']);
+        alert('You have deleted successfully!');
+        this.modalRef.close();
+      }
+    })
+  }
+
 }

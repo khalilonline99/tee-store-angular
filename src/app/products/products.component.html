@@ -4,10 +4,13 @@
       <mat-card class="card" color="primary">
         <mat-card-header>
           <div mat-card-avatar class="header-image"></div>
-          <mat-card-title> {{product.vendor}} </mat-card-title>
+            <mat-card-title *ngIf="product.vendor; else altVendor"> {{product.vendor}} </mat-card-title>
+          <!-- <mat-card-title> {{product.vendor}} </mat-card-title> -->
+          <ng-template #altVendor>
+            <mat-card-title> adidas </mat-card-title>
+          </ng-template>
           <mat-card-subtitle>Verified</mat-card-subtitle>
         </mat-card-header>
-        <!-- <img mat-card-image src={{product.image}} alt="Photo of a T Shirt" class="body-image"> -->
         <ng-container *ngIf="product.image; else altImage">
           <img mat-card-image [src]="product.image" alt="Photo of a T-Shirt" class="body-image">
         </ng-container>

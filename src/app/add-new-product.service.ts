@@ -9,7 +9,8 @@ import { catchError, throwError } from 'rxjs';
 export class AddNewProductService {
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({ 'Content-Type': 'application/json',
+   })
   };
 
   constructor(
@@ -26,6 +27,7 @@ export class AddNewProductService {
       .subscribe(data => {
         if (data.acknowledged) {
           this.router.navigate(['/']);
+          alert('Product Added Successfully!')
         }
       })
     // this.addNewProduct(productForm)
