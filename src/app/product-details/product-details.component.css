@@ -22,6 +22,25 @@
 }
 
 #texts {
-margin-left: 30px;
-margin-right: 90px;
+    margin-left: 30px;
+    margin-right: 90px;
+}
+
+
+/* reponsivenes */
+@media screen and (max-width:768px) {
+    .body {
+        padding: 10px;
+    }
+
+    .details-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #back-button {
+        margin-bottom: 15px;
+    }
+
 }

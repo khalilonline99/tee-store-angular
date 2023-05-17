@@ -1,7 +1,17 @@
+#back-button {
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+}
+
+#button-container {
+    display: flex;
+    text-decoration: none;
+}
 
 .form-container {
-    width:800px;
-    margin:0 auto;
+    width: 800px;
+    margin: 0 auto;
 }
 
 .form-body {
@@ -15,11 +25,44 @@
 }
 
 .input-box {
-    max-width: 300px;;
+    max-width: 300px;
 }
 
 
 .submit-button {
     max-width: 300px;
-    margin:0 auto;
+    margin: 0 auto;
+}
+
+
+
+
+/* reponsivenes */
+@media screen and (max-width:768px) {
+
+
+    .form-container {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .form-body {
+        margin-top: 15px;
+        background-color: rgb(251, 223, 214);
+        border-radius: 10px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        /* max-width: 550px; */
+    }
+
+    .input-box {
+        /* max-width: 300px; */
+        
+    }
+
+    
+
+
+
 }

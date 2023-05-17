@@ -1,6 +1,6 @@
 <div class="form-container">
   <br>
-  <a (click)="backButton()"><button mat-raised-button>Go Back</button></a>
+  <a (click)="backButton()" id="back-button"><button mat-raised-button>Go Back</button></a>
 
   <form class="form-body" [formGroup]="productForm" (ngSubmit)="onSubmit()">
     <h2>Edit Product:</h2>

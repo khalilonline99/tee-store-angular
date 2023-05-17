@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AddNewProductService } from '../add-new-product.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-new-product',
@@ -24,12 +25,17 @@ export class AddNewProductComponent {
 
   constructor(
     private fb: FormBuilder,
-    private addNewProducrService: AddNewProductService
+    private addNewProducrService: AddNewProductService,
+    private location: Location
   ) { }
 
   onSubmit() {
     this.addNewProducrService.onSubmit(this.productForm);
     // console.log(this.productForm.value);
+  }
+
+  backButton(){
+    this.location.back();
   }
 
 

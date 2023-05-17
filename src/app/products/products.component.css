@@ -24,3 +24,15 @@
   padding: 15px;
 }
 
+
+
+/* reponsivenes */
+@media screen and (max-width:768px) {
+
+  .product-container {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      /* margin-top: 25px; */
+  }
+}

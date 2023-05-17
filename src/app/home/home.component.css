@@ -3,3 +3,30 @@
     justify-content: center;
     margin-top: 25px;
 }
+
+#add-button {
+    margin-right: 10px;
+}
+
+/* reponsivenes */
+@media screen and (max-width:768px) {
+
+    .home-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* margin-top: 25px; */
+    }
+
+    #add-button {
+        margin-right: auto;
+        margin-left: auto;
+        width: 150px;
+    }
+
+    #button-container {
+        display: flex;
+        text-decoration: none;
+    }
+    
+}

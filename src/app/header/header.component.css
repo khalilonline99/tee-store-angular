@@ -1,0 +1,16 @@
+
+#header {
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    text-decoration: none;
+    color: white;
+    margin-top: 5px;
+}
+
+#logo h1 {
+    font-weight: 500;
+    font-style: italic;
+}
