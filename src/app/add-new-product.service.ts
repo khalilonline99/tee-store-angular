@@ -21,16 +21,14 @@ export class AddNewProductService {
   status: any;
 
   onSubmit(productForm: any) {
-    // TODO: Use EventEmitter with form value
     console.log(productForm.value);
-    return this.http.post<any>('http://localhost:5000/add-product', JSON.stringify(productForm.value), this.httpOptions)
+    return this.http.post<any>('https://tee-store-backend.vercel.app/add-product', JSON.stringify(productForm.value), this.httpOptions)
       .subscribe(data => {
         if (data.acknowledged) {
           this.router.navigate(['/']);
           alert('Product Added Successfully!')
         }
       })
-    // this.addNewProduct(productForm)
   }
 
 

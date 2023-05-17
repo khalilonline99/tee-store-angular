@@ -19,7 +19,7 @@ export class EditProductService {
 
   editProduct(productForm: any, id: any) {
     console.log(productForm.value, id);
-    return this.http.put<any>(`http://localhost:5000/edit-product/${id}`, productForm.value, this.httpOptions)
+    return this.http.put<any>(`https://tee-store-backend.vercel.app/edit-product/${id}`, productForm.value, this.httpOptions)
     .subscribe(res => {
       if (res.acknowledged) {
         alert('Product Updated Successfully!');

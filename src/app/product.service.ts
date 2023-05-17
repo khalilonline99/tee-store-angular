@@ -24,17 +24,17 @@ export class ProductService {
   ) { }
 
   getData() {
-    return this.http.get('http://localhost:5000/all-products');
+    return this.http.get('https://tee-store-backend.vercel.app/all-products');
   }
 
   getProductById(id: any) {
     const product = {}
-    return this.http.get(`http://localhost:5000/product/${id}`)
+    return this.http.get(`https://tee-store-backend.vercel.app/product/${id}`)
     // return of(product)
   }
 
   deleteProduct(id: number) {
-    const url = `http://localhost:5000/delete-product/${id}`;
+    const url = `https://tee-store-backend.vercel.app/delete-product/${id}`;
     return this.http.delete<any>(url, this.httpOptions)
   }
 
