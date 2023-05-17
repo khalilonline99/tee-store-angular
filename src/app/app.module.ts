@@ -17,8 +17,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
-
-
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 
 
@@ -30,6 +29,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     HomeComponent,
     ProductDetailsComponent,
     AddNewProductComponent,
+    EditProductComponent,
   ],
   imports: [
     BrowserModule,
