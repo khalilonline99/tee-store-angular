@@ -31,7 +31,6 @@ export class AddNewProductComponent {
 
   onSubmit() {
     this.addNewProducrService.onSubmit(this.productForm);
-    // console.log(this.productForm.value);
   }
 
   backButton(){

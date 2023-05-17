@@ -8,18 +8,4 @@ import { ProductService } from '../product.service';
 })
 export class HomeComponent {
 
-  // allProduct: any;
-
-  // constructor (
-  //   private productService: ProductService
-  // ) {}
-
-  // ngOnInit() {
-  //   this.productService.getData().subscribe ( res => {
-  //     this.allProduct = res;
-  //     console.log(this.allProduct);
-      
-  //   })
-  // }
-
 }

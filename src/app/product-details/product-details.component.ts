@@ -36,7 +36,6 @@ export class ProductDetailsComponent {
 
   ngOnInit(): void {
     this.getProduct();
-    // console.log(this.productId);
   }
 
   goBack(): void {
@@ -62,7 +61,7 @@ export class ProductDetailsComponent {
 
 export class ModalGeneral {
 
-  // @Input() productId: any;
+  
   product: any = this.productService.product;
   
   constructor(
@@ -80,11 +79,10 @@ export class ModalGeneral {
 
 
   deleteProduct(): void {
-    // console.log('the id is', this.productService.productId);
   
     this.productService.deleteProduct(this.productService.productId)
     .subscribe(res => {
-      // console.log(res);
+      
       if (res.acknowledged) {
         this.router.navigate(['/']);
         alert('You have deleted successfully!');
